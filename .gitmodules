@@ -1,0 +1,6 @@
+[submodule "hydra-nonuniform"]
+	path = hydra-nonuniform
+	url = https://github.com/intellisec/hydra-nonuniform.git
+[submodule "r-admm-nonuniform"]
+	path = r-admm-nonuniform
+	url = https://github.com/intellisec/r-admm-nonuniform.git

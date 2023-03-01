@@ -1,0 +1,43 @@
+# ->->->->-> Primary <-<-<-<-<-
+num_classes: 10
+layer_type: "subnet"
+init_type: "kaiming_normal"
+
+# ->->->->-> Train <-<-<-<-<-
+trainer: "adv"
+optimizer: "sgd"
+lr: 0.1
+lr_schedule: "cosine"
+wd: 0.0005
+momentum: 0.9
+#warmup
+warmup_epochs: 0
+warmup_lr: 0.1
+
+
+# ->->->->-> Eval <-<-<-<-<-
+val_method: adv
+
+
+# ->->->->-> Save Checkpoint <-<-<-<-<-
+save_dense: true
+
+
+# ->->->->-> Dataset <-<-<-<-<-
+dataset: CIFAR10
+batch_size: 128
+test_batch_size: 128
+data_dir: "/share"
+
+# ->->->->-> Adv <-<-<-<-<-
+epsilon: 0.031
+num_steps: 10
+step_size: 0.0078
+clip_min: 0
+clip_max: 1
+distance: "l_inf"
+
+# ->->->->-> Misc <-<-<-<-<-
+seed: 1234
+print_freq: 10
+gpu: "0"
